@@ -6,102 +6,43 @@
         <meta charset="utf-8">
         <script src="jquery.js"></script>
         <script>
-            $(document).ready(function(){
-                alert("function");
-            });
                 
         </script>
         <style>
-            .site{
-                width: 900px;
-                height:600px;
-            }
-            .header{
-                width:inherit;
-                height:20px;
-                background-image:url("https://media.licdn.com/dms/image/sync/v2/D5627AQFdpwZ5DmRJow/articleshare-shrink_800/articleshare-shrink_800/0/1711970569877?e=2147483647&v=beta&t=Cpipl12ZVq29bBEmv3mKbwBDU2DAGa_5hJmx_M3pVSM");
-            }
-            .main{
-                width:inherit;
-                height:560px;
-            }
-            .footer{
-                width:inherit;
-                height:20px;
-                background-image:url("https://media.licdn.com/dms/image/sync/v2/D5627AQFdpwZ5DmRJow/articleshare-shrink_800/articleshare-shrink_800/0/1711970569877?e=2147483647&v=beta&t=Cpipl12ZVq29bBEmv3mKbwBDU2DAGa_5hJmx_M3pVSM");
-            }
-            .esquerda{
-                width:50px;
-                height:560px;
-                display:inline-block;
-                float:right;
-                background-image:url("https://media.licdn.com/dms/image/sync/v2/D5627AQFdpwZ5DmRJow/articleshare-shrink_800/articleshare-shrink_800/0/1711970569877?e=2147483647&v=beta&t=Cpipl12ZVq29bBEmv3mKbwBDU2DAGa_5hJmx_M3pVSM");
-            }
-            .centro{
-                width:800px;
-                height:560px;
-                display:inline-block;
-                float:right;
-                background-image:url("https://media.licdn.com/dms/image/sync/v2/D5627AQFdpwZ5DmRJow/articleshare-shrink_800/articleshare-shrink_800/0/1711970569877?e=2147483647&v=beta&t=Cpipl12ZVq29bBEmv3mKbwBDU2DAGa_5hJmx_M3pVSM");
-            }
-            .direita{
-                width:50px;
-                height:560px;
-                display:inline-block;
-                float:right;
-                background-image:url("https://media.licdn.com/dms/image/sync/v2/D5627AQFdpwZ5DmRJow/articleshare-shrink_800/articleshare-shrink_800/0/1711970569877?e=2147483647&v=beta&t=Cpipl12ZVq29bBEmv3mKbwBDU2DAGa_5hJmx_M3pVSM");
-            }
+
         </style>
        
     </head>
     <body>
-        <div class="site">
-            <div class="header">
-
-            </div>
-            <div class="main">
-                <div class="esquerda">
-               
-                </div>
-                <div class="centro">
                    <fieldset>
                         <legend>CAULADORA</legend>
-                            <input type="number" id="campo">
+                            <input type="text" id="visor">
                             </br></br>
-                            <button id="btn_um">1</button>
-                            <button id="btn_dois">2</button>
-                            <button id="btn_três">3</button>
-                            <button id="btn_quatro">4</button>
-                            <button id="btn_cinco">5</button>
-                            <button id="btn_seis">6</button>
-                            <button id="btn_sete">7</button>
-                            <button id="btn_oito">8</button>
-                            <button id="btn_nove">9</button>
+                            <button id="btn_um" onclick="adicionar('1')" >1</button>
+                            <button id="btn_dois" onclick="adicionar('2')">2</button>
+                            <button id="btn_três" onclick="adicionar('3')">3</button>
+                            <button id="btn_quatro" onclick="adicionar('4')">4</button>
+                            <button id="btn_cinco" onclick="adicionar('5')">5</button>
+                            <button id="btn_seis" onclick="adicionar('6')">6</button>
+                            <button id="btn_sete" onclick="adicionar('7')">7</button>
+                            <button id="btn_oito" onclick="adicionar('8')">8</button>
+                            <button id="btn_nove" onclick="adicionar('9')">9</button>
                             </br></br>
-                            <button id="btn_zero">0</button>
-                            <button id="btn_subtracao">-</button>
-                            <button id="btn_adicao">+</button>
-                            <button id="btn_multiplicacao">×</button>
-                            <button id="btn_divisao">/</button>
-                            <button id="btn_porcentagem">%</button>
-                            <button id="btn_potencia">^</button>
-                            <button id="btn_pa">(</button>
-                            <button id="btn_pf">)</button>
+                            <button id="btn_zero" onclick="adicionar('0')">0</button>
+                            <button id="btn_subtracao" onclick="adicionar('-')">-</button>
+                            <button id="btn_adicao" onclick="adicionar('+')">+</button>
+                            <button id="btn_multiplicacao" onclick="adicionar('*')">×</button>
+                            <button id="btn_divisao" onclick="adicionar('/')">/</button>
+                            <button id="btn_porcentagem" onclick="adicionar('%')">%</button>
+                            <button id="btn_potencia" onclick="adicionar('^')">^</button>
+                            <button id="btn_pa" onclick="adicionar('')">(</button>
+                            <button id="btn_pf" onclick="adicionar('')">)</button>
                             </br></br>
-                            <button id="btn_ponto">.</button>
-                            <button id="btn_virgula">,</button>
+                            <button id="btn_ponto" onclick="adicionar('.')">.</button>
+                            <button id="btn_virgula" onclick="adicionar(',')">,</button>
                             </br></br>
-                            <button id="btn_igual">=</button>
-                            <button id="btn_limpar">C</button>                            
+                            <button id="btn_igual"onclick="adicionar()">=</button>
+                            <button id="btn_limpar"onclick="adicionar()">C</button>                            
                    </fieldset>
-                </div>
-                <div class="direita">
-
-                </div>
-            </div>
-            <div class="footer">
-
-            </div>
-        </div>
     </body>
 </html>
